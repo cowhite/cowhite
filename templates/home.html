@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+{% load i18n staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/ParallaxContentSlider/css/style.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/ParallaxContentSlider/js/modernizr.custom.28468.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>-->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/ParallaxContentSlider/css/nojs.css" />
+    </noscript>
+
+    <title>CoWhite Software Pvt Ltd. | Python, Django web development services</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static "css/bootstrap_superhero.min.css" %}">
+    
+    <link rel="stylesheet" href="{% static "css/mezzaninetheme1.css" %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">CoWhite</a>
+        </div>
+        <div class="collapse navbar-collapse pull-right">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#da-slider">Home</a></li>
+            <li><a href="#whatwedo">What we do</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+    <br />
+
+    <div id="da-slider" class="da-slider focussedtab">
+        <div class="da-slide">
+          <h2>Python, Django, flask development</h2>
+          <p>We are a team of highly qualified/experienced developers/designers spending our time in delivering quality code everyday.</p>
+          <!-- <div class="da-img"><img src="images/2.png" alt="image01" /></div> -->
+        </div>
+        <div class="da-slide">
+            <h2>We work with latest tools</h2>
+            <p>Django, python, javascript, coffeescript, jquery, html/haml, sass/less/css, trello, git, ubuntu, angular.js, backbone.js</p>
+
+        </div>
+        <div class="da-slide">
+          <h2>Responsive websites</h2>
+          <p> Our developers/designers build responsive websites that suits both mobile and desktop. </p>
+          <!-- <div class="da-img"><img src="images/3.png" alt="image01" /></div> -->
+        </div>
+        <nav class="da-arrows">
+          <span class="da-arrows-prev"></span>
+          <span class="da-arrows-next"></span>
+        </nav>
+      </div>
+
+
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+  <div id="whatwedo" class="focussedtab tal">
+      <h2>What We Do</h2>
+      <p>We provide web development services using python, Django, javascript, coffeescript, jquery, sass/less/css, html/haml, backbone.js, angular.js, git.</p>
+      <h2>Python, Django, flask web development</h2>
+      <p>We are professional developers concentrating on Django.</p>
+
+      <h2>Mysql, Postgresql, Mongodb</h2>
+      <p>We use mysql and postgresql mostly on our projects. We rarely use mongodb based on clients requirement.</p>
+      <h2>Deployment using fabric, Nginx, Gunicorn, apache on Ubuntu/Linux</h2>
+      <p>We deploy apps to servers using fabric. We serve static files mostly using nginx and rarely using apache. We use gunicorn with supervisor. We love Ubuntu.</p>
+      <h2>Chrome Apps</h2>
+      <p>We have experience building chrome apps that have thousands of users.</p>
+      <h2>Javascript, Coffeescript</h2>
+      <p>We love using Coffeescript(compiles to javascript), but we code in javascript too.</p>
+      <h2>Task Management</h2>
+      <p>We have used many tools in the past and currently in love with Trello.</p>
+      <h2>Version Control</h2>
+      <p>We use git with proper commits for all the code that we develop.</p>
+      <h2>Our Tools</h2>
+      <p>Python, Django, Javascript, Jquery, Trello, Github, Ubuntu</p>
+      
+      <h2>Are we just python developers?</h2>
+      <p>No. We have good expertise in various programming languages/frameworks. But, we are focussed on Django development.</p>
+      <h2>and more...</h2>
+
+  </div>
+
+
+  <div class="tal focussedtab" id="contact">
+      <h1>Say Hello!</h1>
+      <div class='col-xs-2'></div>
+      <div class="col-xs-10">
+          <p id='contact-email'>hello@cowhite.com</p>
+      </div>
+  </div>
+
+
+    </div><!-- /.container -->
+    {% include 'includes/footer.html' %}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/ParallaxContentSlider/js/jquery.cslider.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery.nav.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        $('#da-slider').cslider({ 'autoplay': true, 'interval': 10000 });
+
+        $('.nav').onePageNav({
+            currentClass: 'active'
+         });
+
+       });
+
+    </script> 
+  </body>
+</html>

@@ -224,6 +224,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
+STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, "staticfiles"),)
 
 
 ################
@@ -231,6 +232,7 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
+    "mezzaninetheme1",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -362,3 +364,6 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+SITE_TITLE = "CoWhite Software" 
+SITE_TAGLINE = "Python/Django Development"

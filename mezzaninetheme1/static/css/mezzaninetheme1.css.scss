@@ -1,0 +1,89 @@
+//$heading_color_white_back: #339C33;
+// $heading_color_dark_back: #92EE92;
+$heading_color_white_back: white;
+$heading_color_dark_back: white;
+$body_back: #2b3e50;
+$head_back: #4e5d6c;
+$lato_font: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+body {
+  /*font-family: 'Droid Sans', sans-serif;*/
+  font-family: $lato_font;
+}
+
+a {
+  color: #EBAF07;
+}
+
+h2 a {
+  color: white;
+}
+
+.navbar-nav>li>a {
+  font-family: cursive;
+}
+
+#post-title {
+  margin-top: 80px;
+  color: $heading_color_dark_back;
+  text-align: center;
+  line-height: 1.4em;
+}
+
+h3 {
+  color: $heading_color_white_back;
+}
+
+.da-slider {
+     background: initial;
+     border-top: none;
+     box-shadow: none;
+     border-bottom: none;
+
+ }
+.da-slider p {
+     color: #EBAF07;
+}
+
+.da-slide h2 {
+  font-weight: 100;
+  font-family: $lato_font;
+  font-size: 56px;
+}
+
+ footer {
+  background-color: $head_back;
+  min-height: 40px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+ }
+
+ #contact-email {
+   color: white;
+   font-size: 15pt;
+ }
+
+ #contact {
+   padding-top: 100px;
+   padding-bottom: 400px;
+ }
+
+ #contact h1{
+  border-bottom: 1px solid #8B753D;
+ }
+
+ .tac {
+   text-align: center;
+ }
+ .tal {
+   text-align: left;
+ }
+ 
+ #whatwedo p {
+   color: #EBAF07;
+   font-family: cursive;
+ }
+ #whatwedo {
+   padding-top: 100px;
+ }

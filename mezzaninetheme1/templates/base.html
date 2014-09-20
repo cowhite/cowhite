@@ -16,9 +16,8 @@
 {% endifinstalled %}
 
 {% compress css %}
-<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/bootstrap_superhero.min.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
-<link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
 {% if LANGUAGE_BIDI %}
 <link rel="stylesheet" href="{% static "css/rtl.css" %}">
 {% endif %}
@@ -26,15 +25,25 @@
 <link rel="stylesheet" href="{% static "css/cartridge.css" %}">
 {% if LANGUAGE_BIDI %}
 <link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
+
 {% endif %}
 {% endifinstalled %}
+<link rel="stylesheet" href="{% static "css/mezzaninetheme1.css" %}">
+<!--
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+-->
+<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
 {% block extra_css %}{% endblock %}
 {% endcompress %}
 
 {% compress js %}
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
 <script src="{% static "js/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
 
@@ -82,26 +91,30 @@
 {% endif %}
 {% endnevercache %}
 
-<h1>{% block title %}{% endblock %}</h1>
+<h1 id="post-title">{% block title %}{% endblock %}</h1>
 
+{% comment %}
 <ul class="breadcrumb">
 {% spaceless %}
 {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
 {% endspaceless %}
 </ul>
+{% endcomment %}
 
 </div>
 
 <div class="container">
 <div class="row">
 
-<div class="col-md-2 left">
+<div class="col-md-1 left">
+  {% comment %}
     {% block left_panel %}
     <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
     {% endblock %}
+  {% endcomment %}
 </div>
 
-<div class="col-md-7 middle">
+<div class="col-md-8 middle panel">
     {% block main %}{% endblock %}
 </div>
 
@@ -122,28 +135,24 @@
 
 </div>
 </div>
-
-<footer>
-<div class="container">
-{% page_menu "pages/menus/footer.html" %}
-
-<div class="row">
-<p class="site-info text-center">
-    {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    <span class="separator">|</span>
-    {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
+{% comment %}
+<div class="col-md-12 right">
+    {% nevercache %}
+    {% include "includes/user_panel.html" %}
+    {% endnevercache %}
+    <div class="panel panel-default">
+    <div class="panel-body">
+    {% block right_panel %}
+    {% ifinstalled mezzanine.twitter %}
+    {% include "twitter/tweets.html" %}
     {% endifinstalled %}
-</p>
+    {% endblock %}
+    </div>
+    </div>
 </div>
-</div>
-</footer>
+{% endcomment %}
+
+{% include 'includes/footer.html' %}
 
 {% include "includes/footer_scripts.html" %}
 
