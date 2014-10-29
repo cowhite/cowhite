@@ -252,6 +252,9 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
+
+    #third party
+    'mdown',
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -367,3 +370,7 @@ else:
 
 SITE_TITLE = "CoWhite Software" 
 SITE_TAGLINE = "Python/Django Development"
+
+RICHTEXT_WIDGET_CLASS = 'mdown.forms.WmdWidget'
+RICHTEXT_FILTER = "mdown.filters.codehilite"
+RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
