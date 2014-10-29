@@ -7,7 +7,10 @@ pre {
   color: white; }
 
 a {
-  color: #EBAF07; }
+  color: #ebaf07; }
+
+.post-meta a {
+  color: #ebaf07; }
 
 h2 a {
   color: white; }

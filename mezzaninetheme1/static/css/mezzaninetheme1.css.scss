@@ -5,6 +5,7 @@ $heading_color_dark_back: white;
 $body_back: #2b3e50;
 $head_back: #4e5d6c;
 $lato_font: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+$link_color: #EBAF07;
 
 body {
   /*font-family: 'Droid Sans', sans-serif;*/
@@ -17,7 +18,10 @@ pre {
 }
 
 a {
-  color: #EBAF07;
+  color: $link_color;
+}
+.post-meta a {
+  color: $link_color;
 }
 
 h2 a {
