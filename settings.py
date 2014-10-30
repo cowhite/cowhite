@@ -374,3 +374,4 @@ SITE_TAGLINE = "Python/Django Development"
 RICHTEXT_WIDGET_CLASS = 'mdown.forms.WmdWidget'
 RICHTEXT_FILTER = "mdown.filters.codehilite"
 RICHTEXT_FILTERS = (RICHTEXT_FILTER,)
+RICHTEXT_FILTER_LEVEL = 3
